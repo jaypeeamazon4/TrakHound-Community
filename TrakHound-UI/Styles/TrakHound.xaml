@@ -3,9 +3,9 @@
                     xmlns:ice="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
 
     <!--TrakHound Colors-->
-    <Color ice:Freeze="True" x:Key="TrakHound_Blue_Color">#0080ff</Color>
-    <Color ice:Freeze="True" x:Key="TrakHound_LightBlue_Color">#40a0ff</Color>
-    <Color ice:Freeze="True" x:Key="TrakHound_DarkBlue_Color">#0040ff</Color>
+    <Color ice:Freeze="True" x:Key="TrakHound_Blue_Color">#8c8cf9</Color>
+    <Color ice:Freeze="True" x:Key="TrakHound_LightBlue_Color">#a8a8f9</Color>
+    <Color ice:Freeze="True" x:Key="TrakHound_DarkBlue_Color">#6363b3</Color>
 
     <!--TrakHound Brushes-->
     <SolidColorBrush ice:Freeze="True" x:Key="TrakHound_Blue" Color="{StaticResource TrakHound_Blue_Color}"/>

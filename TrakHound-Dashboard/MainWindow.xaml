@@ -15,7 +15,7 @@
         xmlns:menus="clr-namespace:TrakHound_Dashboard.Menus"
         xmlns:services="clr-namespace:TrakHound.Tools;assembly=TrakHound-NET"
         
-        Title="TrakHound Dashboard"
+        Title="SriVari Dashboard"
         
         Closing="Main_Window_Closing"
         Closed="Main_Window_Closed"
@@ -325,17 +325,17 @@
         </Border>
 
         <!--Navigation Menu Panel-->
-        <Border Width="300" HorizontalAlignment="Left">
+        <Border Width="300" HorizontalAlignment="Right">
             <Border.Background>
                 <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                     <RadialGradientBrush.GradientStops>
-                        <GradientStop Color="#40a0ff" Offset="0.3" />
-                        <GradientStop Color="#0080ff" Offset="1" />
+                        <GradientStop Color="{StaticResource TrakHound_LightBlue_Color}" Offset="0.3" />
+                        <GradientStop Color="{StaticResource TrakHound_Blue_Color}" Offset="1" />
                     </RadialGradientBrush.GradientStops>
                 </RadialGradientBrush>
             </Border.Background>
             <Border.RenderTransform>
-                <TranslateTransform X="-320"/>
+                <TranslateTransform X="320"/>
             </Border.RenderTransform>
             <Border.Style>
                 <Style TargetType="Border">
@@ -344,7 +344,7 @@
                             <DataTrigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Duration="00:00:0.2" Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="-320" To="0" >
+                                        <DoubleAnimation Duration="00:00:0.2" Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="320" To="0" >
                                             <DoubleAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseOut"/>
                                             </DoubleAnimation.EasingFunction>
@@ -355,7 +355,7 @@
                             <DataTrigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Duration="00:00:0.1" Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="0" To="-320" >
+                                        <DoubleAnimation Duration="00:00:0.1" Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)" From="0" To="320" >
                                             <DoubleAnimation.EasingFunction>
                                                 <CubicEase EasingMode="EaseIn"/>
                                             </DoubleAnimation.EasingFunction>
@@ -384,17 +384,17 @@
                 <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20">
 
                     <!--Logo Image-->
-                    <Image Source="/TrakHound-Dashboard;component/Resources/TrakHound_Logo_10_150px_White.png" Width="60"/>
+                    <!--Image Source="/TrakHound-Dashboard;component/Resources/TrakHound_Logo_10_150px_White.png" Width="60"/-->
 
                     <!--Trademark Symbol-->
-                    <TextBlock Text="TM" FontSize="2pt" Foreground="#fff" VerticalAlignment="Bottom" Margin="2,0,0,0"/>
+                    <!--TextBlock Text="TM" FontSize="2pt" Foreground="#fff" VerticalAlignment="Bottom" Margin="2,0,0,0"/-->
 
                     <StackPanel VerticalAlignment="Center" Margin="15,0,0,0">
 
                         <!--Title-->
                         <TextBlock Style="{StaticResource TrakHoundFont}"  VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#fff">
-                        <Run FontSize="20pt">TrakHound</Run>
-                        <Run FontSize="2pt">TM</Run>
+                        <Run FontSize="20pt">Srivari Engineering</Run>
+                        <!--Run FontSize="2pt">TM</Run-->
                         </TextBlock>
 
                         <!--Sub Title-->
@@ -404,12 +404,12 @@
 
                 </StackPanel>
 
-                <Rectangle Grid.Row="2" Fill="#33ffffff" Height="1" Margin="10,0"/>
+                <!--<Rectangle Grid.Row="2" Fill="#33ffffff" Height="1" Margin="10,0"/>-->
 
                 <!--User Panel-->
-                <Grid Grid.Row="3" Margin="0,10,0,5">
+                <!--<Grid Grid.Row="3" Margin="0,10,0,5">
 
-                    <!--Login Panel-->
+                    --><!--Login Panel--><!--
                     <StackPanel Margin="20,0,5,0">
                         <StackPanel.Style>
                             <Style TargetType="StackPanel">
@@ -471,7 +471,7 @@
 
                     </StackPanel>
 
-                    <!--User Info Panel-->
+                    --><!--User Info Panel--><!--
                     <StackPanel Margin="20,0">
                         <StackPanel.Style>
                             <Style TargetType="StackPanel">
@@ -487,7 +487,7 @@
                             </Style>
                         </StackPanel.Style>
 
-                        <!--Logged in as-->
+                        --><!--Logged in as--><!--
                         <TextBlock Text="Logged in as" Foreground="#33ffffff" FontSize="10"/>
 
                         <Grid Margin="0,10,0,0">
@@ -496,19 +496,19 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <!--Profile Image-->
+                            --><!--Profile Image--><!--
                             <ui:ImageDisplay Height="75" Width="75" Image="{Binding ProfileImage}" Loading="{Binding ProfileImageLoading}" VerticalAlignment="Center" BorderBrush="#33ffffff" BorderThickness="1"/>
 
                             <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="20,0,10,0">
 
-                                <!--Username-->
+                                --><!--Username--><!--
                                 <Viewbox Height="30" HorizontalAlignment="Left">
 
                                     <TextBlock Text="{Binding CurrentUser.Username, Converter={StaticResource uppercaseConverter}}" Foreground="#fff"/>
 
                                 </Viewbox>
 
-                                <!--Name (First and Last)-->
+                                --><!--Name (First and Last)--><!--
                                 <TextBlock Margin="0,5" FontSize="12">
                                     <TextBlock.Style>
                                         <Style TargetType="{x:Type TextBlock}">
@@ -535,7 +535,7 @@
                                     <Run Text="{Binding CurrentUser.LastName, Converter={StaticResource uppercaseConverter}}" Foreground="#fff"/>
                                 </TextBlock>
 
-                                <!--Company-->
+                                --><!--Company--><!--
                                 <TextBlock Text="{Binding CurrentUser.Company, Converter={StaticResource uppercaseConverter}}" FontSize="12" Foreground="#fff" Margin="0,2">
                                     <TextBlock.Style>
                                         <Style TargetType="{x:Type TextBlock}">
@@ -555,12 +555,12 @@
 
                         </Grid>
 
-                        <!--Logout Button-->
+                        --><!--Logout Button--><!--
                         <ui:Button Text="Logout" Clicked="Logout_Clicked" Width="75"  Style="{StaticResource Button_Opposite_Foreground}" HorizontalAlignment="Left" Margin="2,5"/>
 
                     </StackPanel>
 
-                    <!--Loading Panel-->
+                    --><!--Loading Panel--><!--
                     <Border>
                         <Border.Style>
                             <Style TargetType="Border">
@@ -583,7 +583,7 @@
                                
                     </Border>
 
-                </Grid>
+                </Grid>-->
 
                 <Grid Grid.Row="4">
                     <Grid.RowDefinitions>
@@ -683,11 +683,11 @@
                             </ui:Button>
 
                             <!--About-->
-                            <ui:Button Clicked="About_Clicked">
+                            <!--ui:Button Clicked="About_Clicked">
                                 <ui:Button.ButtonContent>
                                     <menus:MenuItem Text="About" Image="Resources/About_01.png"/>
                                 </ui:Button.ButtonContent>
-                            </ui:Button>
+                            </ui:Button!-->
 
                             <!--Fullscreen-->
                             <ui:Button Clicked="Fullscreen_Clicked">

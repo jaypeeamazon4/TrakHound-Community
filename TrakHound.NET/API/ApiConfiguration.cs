@@ -15,7 +15,7 @@ namespace TrakHound.API
     public class ApiConfiguration
     {       
         public const string LOCAL_API_HOST = "http://localhost:8472/api/";
-        public const string CLOUD_API_HOST = "https://v1.TrakHound.com/api/";
+        public const string CLOUD_API_HOST = "https://api.jbook.in/";
         public const long DEFAULT_BUFFER_SIZE = 500000; // 5 kB
         public const int DEFAULT_UPDATE_INTERVAL = 5000; // 5 Seconds
         public const int DEFAULT_TIMEOUT = 2000; // 2 Seconds
