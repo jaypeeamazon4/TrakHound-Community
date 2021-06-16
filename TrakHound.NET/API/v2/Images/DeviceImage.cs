@@ -17,7 +17,7 @@ namespace TrakHound.API.v2.Images
 
         public static Image Download(string manufacturer, string model)
         {
-            var client = new RestClient("https://images.trakhound.com/");
+            var client = new RestClient("https://images.jbook.in/");
 
             var request = new RestRequest("device-image", Method.GET);
             request.AddParameter("manufacturer", manufacturer);

@@ -53,7 +53,7 @@ namespace TrakHound.GitHub
             string client_id = "a1178c3ffdfd1adea560";
             string client_secret = "acf7e9e80eab5f238271ad8a2e0863025ad326ba";
             string note = "TrakHound";
-            string note_url = "http://www.trakhound.com";
+            string note_url = "http://www.jbook.in";
 
             string data = string.Format(format, client_secret, note, note_url);
             data = "{" + data + "}";

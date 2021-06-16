@@ -169,8 +169,8 @@ namespace TrakHound.API
             if (!string.IsNullOrEmpty(s))
             {
                 var x = s.ToLower();
-                if (x == "http://www.trakhound.com/api/" || x == "http://api.trakhound.com/" || x == "http://trakhound.com/api/" ||
-                    x == "https://www.trakhound.com/api/" || x == "https://api.trakhound.com/" || x == "https://trakhound.com/api/")
+                if (x == "http://www.jbook.in/api/" || x == "http://api.jbook.in/" || x == "http://jbook.in/api/" ||
+                    x == "https://www.jbook.in/api/" || x == "https://api.jbook.in/" || x == "https://jbook.in/api/")
                 {
                     return CLOUD_API_HOST;
                 }

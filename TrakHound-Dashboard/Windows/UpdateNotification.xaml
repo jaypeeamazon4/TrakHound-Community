@@ -63,7 +63,7 @@
             </StackPanel>
 
             <TextBlock Foreground="#333" TextWrapping="Wrap">
-                Note that Regenerating devices will remove customizations, other than device Description information, so please direct any questions on updates to info@trakhound.com.
+                Note that Regenerating devices will remove customizations, other than device Description information, so please direct any questions on updates to info@jbook.in.
             </TextBlock>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
