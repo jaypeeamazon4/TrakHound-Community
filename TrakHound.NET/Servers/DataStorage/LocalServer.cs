@@ -62,7 +62,7 @@ namespace TrakHound.Servers.DataStorage
             {
                 listener = new HttpListener();
                 listener.Prefixes.Add("http://localhost:" + PORT + "/api/");
-                listener.Prefixes.Add("http://+:" + PORT + "/api/");
+                // listener.Prefixes.Add("http://+:" + PORT + "/api/");
                 listener.Start();
 
                 ThreadPool.QueueUserWorkItem((x) =>
